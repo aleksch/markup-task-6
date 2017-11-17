@@ -1,0 +1,138 @@
+body {
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.wrapper {
+    max-width: 1280px;
+    margin: auto auto;
+    display: grid;
+    grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 6fr;
+    /* m, s, x, v - empty space */
+    /* m, s, x, v - blocks */
+    grid-template-areas: "a s s s b c" "m d d e p c" "m d d e p x" "f g g g g x" "v o o o o x" "v l l l k x"
+}
+
+.wrapper>div {
+    background: none;
+    border: 1px solid black;
+}
+
+.geo {
+    grid-area: a;
+    line-height: 11px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    white-space: nowrap;
+}
+
+.geo__button {
+    cursor: pointer;
+    display: inline-block;
+    color: #999;
+}
+
+.geo__sity {
+    color: inherit;
+}
+
+.geo__icon {
+    position: relative;
+    display: inherit;
+    background-image: url(/img/geo-icons.svg);
+    width: 19px;
+    height: 19px;
+    top: 5px;
+    left: 2px;
+}
+
+.geo__button:hover {
+    color: red;
+}
+
+.geo__button:hover .geo__icon {
+    background-position: center 19px;
+}
+
+.options {
+    grid-area: b;
+    height: 100px;
+}
+
+.options > input {
+    display: none;
+}
+
+.options > label {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.options__menu {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.options__menu__element {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+#options:focus ~ .options__menu {
+    display: block;
+}
+
+.login {
+    grid-area: c;
+}
+
+.news {
+    grid-area: d;
+}
+
+.ad {
+    grid-area: e;
+}
+
+.logo {
+    grid-area: f;
+}
+
+.search {
+    grid-area: g;
+}
+
+.ad-middle {
+    grid-area: o;
+}
+
+.info-blocks {
+    grid-area: l;
+    display: flex;
+}
+
+.info-blocks div {
+    width: 33%;
+}
+
+
+/*
+.block1 {
+    grid-area: l;
+}
+
+.block2 {
+    grid-area: h;
+}
+
+.block3 {
+    grid-area: k;
+} */
