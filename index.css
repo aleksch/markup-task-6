@@ -16,8 +16,8 @@ heigth
     margin: auto auto;
     display: grid;
     /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
-    grid-template-columns: 232px 470px 230px 116px 232px;
-    grid-template-rows: 80px 250px 110px 110px 500px ;
+    grid-template-columns: 210px 570px 200px 120px 180px;
+    grid-template-rows: 80px 230px 110px 110px 500px ;
     /* m, s, x, v - empty space */
     /* m, s, x, v - blocks */
     grid-template-areas: 
@@ -242,6 +242,36 @@ heigth
 
 .ad {
     grid-area: e;
+}
+
+.ad__container {
+    padding: 5px;
+    float: right;
+    /* width: 180px; */
+}
+
+.add__image {
+    float: left;
+    
+    margin: 0 5px 16px 0;
+}
+
+.add__age span {
+    color: #0d44a0;
+    font-size: 10px;
+}
+
+.add__info {
+    clear: both;
+}
+
+.add__info__caption {
+    color: #0054b9;
+    cursor: pointer;
+    transition: color .15s ease-out;
+    font-size: 18px;
+    margin-bottom: 17px;
+    display: inline-block;
 }
 
 .logo {
