@@ -2,6 +2,22 @@ body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
+
+a {
+    text-decoration: none;
+    color: #0054b9;
+    transform: color .15s ease-out;
+}
+
+a:hover {
+    color: #c00;
+}
+
+input:focus, button:focus {
+    outline: 0;
+}
+
+
 /* 256px 
 2 3 3 1 2 = 11
 116
@@ -278,8 +294,89 @@ heigth
     grid-area: f;
 }
 
+.logo__image img {
+    float: right;
+}
+
 .search {
     grid-area: g;
+    padding: 5px;
+}
+
+.search__container{
+    margin: -7px 0;
+}
+
+.search__menu ul {
+    padding: 0px;
+}
+
+.search__menu ul li {
+    list-style-type: none;
+    display: inline-block;
+    padding-right: 10px;
+    font-size: 15px;
+}
+
+.search__input {
+    margin: 15px 0 8px;
+}
+
+.search__input input {
+    width: 87%;
+    height: 35px;
+    border: 2px solid #ffdb4d;
+    font-size: 16px;
+    line-height: 36px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-right: -5px;
+}
+
+.search__input__mic,
+.search__input__key {
+    position: absolute;
+    display: inline-block;
+    background-image: url(img/mic.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 24px;
+    height: 34px;
+    margin: 0px -70px;
+    cursor: pointer;
+    opacity: .2;
+}
+
+.search__input__key {
+    background-image: url(img/key.svg);
+    width: 28px;
+    margin: 0px -40px;
+    opacity: .7;
+}
+
+.search__input__mic:hover {
+    opacity: .5;
+}
+ 
+.search__input__key:hover {
+    opacity: 1;
+}
+
+.search__input button {
+    width: 13%;
+    height: 35px;
+    background-color: #ffdb4d;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search__help a {
+    color: #999;
+}
+/* не работает вывше определённый :hover (( */
+.search__help a:hover {
+    color: #c00;
 }
 
 .ad-middle {
