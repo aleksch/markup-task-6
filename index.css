@@ -68,47 +68,37 @@ body {
     position: relative;
     display: inline-block;
     cursor: pointer;
-}
+} 
 
 .options__menu {
     display: none;
-    position: absolute;
+    position: relative;
     background-color: #f9f9f9;
-    
-    /* background-color: red; */
-    min-width: 200px;
-    right: 120px; 
-    padding: 10px 5px;
+    margin: 0 -70px;
+    top: 15px;
+    padding: 10px 5px 0px 5px;
     box-shadow: 0 10px 20px -5px rgba(0,0,0,.4);
-    border-top: 5px solid #f9f9f9;
-    overflow: hidden;
-    margin-top: 0px;
+    margin-top: 0;
+    cursor: auto;
 }
 
-i {
+.options__menu::after {
+    content: '';
 	position: relative; 
-	width: 0;
-    height: 0;
-    left: 20px;
+    left: 85px;
+    bottom: 199px;
 	border-left: 15px solid transparent;
 	border-right: 15px solid transparent;
     border-bottom: 15px solid #f9f9f9;
-    z-index: 10;
 }
 
 .options__button {
+    display: block;
     outline:none;
+    cursor: pointer;
 }
 
 .options__button:focus .options__menu{
-    display: block;
-}
-
-i {
-    display: none;
-}
-
-.options__button:focus i{
     display: block;
 }
 
@@ -118,6 +108,34 @@ i {
 
 .login {
     grid-area: c;
+    padding: 3px;
+}
+
+.login__container {
+    min-width: 140px;
+    /* border: 1px solid black; */
+    border-radius: 4px;
+    padding: 15px;
+    box-shadow: 0 0 2px 0 rgba(0,0,0,.1), 
+                0 2px 6px 0 rgba(0,0,0,.1);
+}
+
+.login__container span {
+    display: inline-block;
+}
+
+.login__container__email {
+    padding-top: 15px; 
+}
+
+.login__container__name,
+.login__container__email__count {
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.login__container__name::first-letter {
+    color: red;
 }
 
 .news {
