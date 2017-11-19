@@ -2,16 +2,30 @@ body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 }
-
+/* 256px 
+2 3 3 1 2 = 11
+116
+for 1280
+width
+232px 470px 230px 116px 232px = 1280
+heigth
+80px 210px 110px 110px 500px 
+*/
 .wrapper {
-    max-width: 1280px;
+    width: 1280px;
     margin: auto auto;
     display: grid;
-    grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr;
-    grid-template-rows: 1fr 1fr 2fr 1fr 1fr 6fr;
+    /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
+    grid-template-columns: 232px 470px 230px 116px 232px;
+    grid-template-rows: 80px 250px 110px 110px 500px ;
     /* m, s, x, v - empty space */
     /* m, s, x, v - blocks */
-    grid-template-areas: "a s s s b c" "m d d e p c" "m d d e p x" "f g g g g x" "v o o o o x" "v l l l k x"
+    grid-template-areas: 
+    "a s s b c" 
+    "m d e p x" 
+    "f g g g x" 
+    "v o o o x" 
+    "v l l k x"
 }
 
 .wrapper>div {
@@ -22,7 +36,7 @@ body {
 .geo {
     grid-area: a;
     line-height: 11px;
-    font-size: 14px;
+    font-size: 13px;
     font-family: Arial, Helvetica, sans-serif;
     white-space: nowrap;
 }
@@ -31,6 +45,7 @@ body {
     cursor: pointer;
     display: inline-block;
     color: #999;
+    transition: color .15s ease-out;
 }
 
 .geo__sity {
@@ -57,7 +72,8 @@ body {
 
 .options {
     grid-area: b;
-    height: 100px;
+    padding-top: 18px;
+   
 }
 
 .options>input {
@@ -140,6 +156,88 @@ body {
 
 .news {
     grid-area: d;
+    padding: 5px;
+}
+
+.head span {
+    margin-right: 10px; 
+    cursor: pointer;
+    transition: color .15s ease-out;
+    font-size: 18px;
+}
+
+.head span:hover {
+    color: #c00;
+}
+
+.head__now {
+    color: #0054b9;
+}
+
+.head__city {
+    cursor: pointer;
+    color: #6da2e1;
+}
+
+.head__date {
+    font-size: 11px;
+    color: #999;
+}
+
+.news__list {
+    margin-left: -44px;
+}
+
+.news__list ul li {
+    list-style-type: none;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+    transition: color .15s ease-out;
+}
+
+.news__list li:hover {
+    color: #c00;
+}
+
+.news__list ul {
+    margin-bottom: 0;
+}
+
+.news__list ul li::before {
+    left: -10px;
+    bottom: 1px;
+    content: '•';
+    font: 9px Verdana,sans-serif;
+    position: relative;
+}
+
+.news__stocks__caption {
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.news__stocks__value {
+    font-size: 13px;
+}
+
+.news__stocks__change {
+    font-size: 13px;
+    color: #999;
+    margin-right: 10px;
+}
+
+.news__stocks__more {
+    color: #999;
+    opacity: .5;
+    cursor: pointer;
+    position: relative;
+    top: 2px;
+    transition: color .15s ease-out;
+}
+
+.news__stocks__more:hover {
+    color: #c00;
 }
 
 .ad {
