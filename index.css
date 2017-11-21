@@ -43,7 +43,7 @@ heigth
     display: grid;
     /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
     grid-template-columns: 210px 570px 200px 120px 180px;
-    grid-template-rows: 80px 230px 110px 110px 550px;
+    grid-template-rows: 65px 230px 110px 110px 550px;
     /* m, s, x, v - empty space */
     /* m, s, x, v - blocks */
     grid-template-areas: "a s s b c" "m d e p x" "f g g g x" "v o o o x" "v l l l x"
@@ -51,7 +51,7 @@ heigth
 
 .wrapper>div {
     background: none;
-    border: 1px solid black;
+    /* border: 1px solid black; */
 }
 
 .geo {
@@ -122,7 +122,7 @@ heigth
     content: '';
     position: relative;
     left: 85px;
-    bottom: 199px;
+    bottom: 192px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-bottom: 15px solid #f9f9f9;
@@ -265,6 +265,10 @@ heigth
 
 .ad__container {
     padding: 5px;
+}
+
+.ad__container img {
+    width: 100%;
 }
 
 .add__image {
@@ -424,7 +428,7 @@ heigth
     border-radius: 5px;
     transform: scale(.88);
     transition: transform .15s ease-out;
-    background-image: linear-gradient(to right,#00a3fa,#716ef8);
+    background-image: linear-gradient(to right, #00a3fa, #716ef8);
 }
 
 .info-blocks__tv__logo i {
@@ -432,13 +436,11 @@ heigth
     font-size: 30px;
     position: absolute;
     margin: -16px 7px;
-    
 }
 
 .info-blocks__tv__logo:hover {
     cursor: pointer;
     transform: scale(1);
-
 }
 
 .info-blocks__tv li {
@@ -470,13 +472,12 @@ div.info-block__auto__news {
     filter: blur(2px);
     margin: 20px -210px;
 }
- 
+
 .info-block__auto .bot {
     background-color: rgba(255, 255, 255, 0.7);
     margin: -30px 0px;
     height: 20px;
 }
-
 
 .info-block__auto__news::-webkit-scrollbar {
     width: 0;
@@ -486,16 +487,101 @@ div.info-block__auto__news {
     margin-bottom: 10px;
 }
 
-
-/*
-.block1 {
-    grid-area: l;
+.block3>div {
+    margin-bottom: 20px;
 }
 
-.block2 {
-    grid-area: h;
+.weather__status,
+.traffic__status {
+    display: inline-block;
+    background-image: url(img/weather.svg);
+    width: 32px;
+    height: 32px;
+    margin: -15px 0px -10px;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
 }
 
-.block3 {
-    grid-area: k;
-} */
+.weather__deg,
+.traffic__balls {
+    font-size: 18px;
+}
+
+.traffic__status {
+    background-image: url(img/traffic.svg);
+}
+
+.map__more span {
+    margin-right: 10px;
+    white-space: nowrap;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.map__more span:first-of-type {
+    margin-bottom: 15px;
+}
+
+.info-block__affiche .list li {
+    margin-bottom: 10px;
+}
+
+.info-block__affiche .list li span:nth-child(even) {
+    padding-left: 7px;
+    color: #999;
+}
+
+@media screen and (max-width: 1280px) and (min-width: 720px) {
+    .wrapper {
+        max-width: 720px;
+        margin: auto auto;
+        display: grid;
+        /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
+        grid-template-columns: 130px 400px 100px 100px;
+        grid-template-rows: 65px 230px 110px 110px 550px;
+        /* m, s, x, v - empty space */
+        /* m, s, x, v - blocks */
+        grid-template-areas: "a s b c" "d d d d" "f g g g" "o o o o" "l l l l"
+    }
+    .ad {
+        display: none;
+    }
+    .search__input input {
+        width: 73%;
+    }
+    .info-blocks div {
+        width: 255px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    * {
+        font-size: 12px;
+    }
+    .wrapper {
+        max-width: 600px;
+        margin: auto auto;
+        display: grid;
+        /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
+        grid-template-columns: 120px 200px 100px 100px;
+        grid-template-rows: 70px 220px 110px 110px 550px;
+        /* m, s, x, v - empty space */
+        /* m, s, x, v - blocks */
+        grid-template-areas: "a s b c" "d d d d" "f g g g" "o o o o" "p l l l"
+    }
+    .ad {
+        display: none;
+    }
+    .search__input input {
+        width: 87%;
+    }
+    .search__container {
+        margin: -15px 0;
+    }
+    .info-blocks {
+        flex-direction: column;
+    }
+    .info-blocks div {
+        width: 305px;
+    }
+}
