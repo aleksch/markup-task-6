@@ -26,30 +26,20 @@ button:focus {
     outline: 0;
 }
 
-
-/* 256px
-2 3 3 1 2 = 11
-116
-for 1280
-width
-232px 470px 230px 116px 232px = 1280
-heigth
-80px 210px 110px 110px 500px
-*/
-
 .wrapper {
     width: 1280px;
-    margin: auto auto;
+    margin: auto;
     display: grid;
     /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
     grid-template-columns: 210px 570px 200px 120px 180px;
     grid-template-rows: 65px 230px 110px 110px 550px;
     /* m, s, x, v - empty space */
     /* m, s, x, v - blocks */
-    grid-template-areas: "a s s b c" "m d e p x" "f g g g x" "v o o o x" "v l l l x"
+    grid-template-areas: 'a s s b c' 'm d e p x' 'f g g g x'
+        'v o o o x' 'v l l l x';
 }
 
-.wrapper>div {
+.wrapper > div {
     background: none;
     /* border: 1px solid black; */
 }
@@ -96,11 +86,11 @@ heigth
     padding-top: 18px;
 }
 
-.options>input {
+.options > input {
     display: none;
 }
 
-.options>label {
+.options > label {
     position: relative;
     display: inline-block;
     cursor: pointer;
@@ -112,7 +102,7 @@ heigth
     background-color: #f9f9f9;
     margin: 0 -70px;
     top: 15px;
-    padding: 10px 5px 0px 5px;
+    padding: 10px 5px auto;
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .4);
     margin-top: 0;
     cursor: auto;
@@ -259,15 +249,15 @@ heigth
     color: #c00;
 }
 
-.ad {
+.add {
     grid-area: e;
 }
 
-.ad__container {
+.add__container {
     padding: 5px;
 }
 
-.ad__container img {
+.add__container img {
     width: 100%;
 }
 
@@ -312,7 +302,7 @@ heigth
 }
 
 .search__menu ul {
-    padding: 0px;
+    padding: 0;
 }
 
 .search__menu ul li {
@@ -346,7 +336,7 @@ heigth
     background-position: center;
     width: 24px;
     height: 34px;
-    margin: 0px -70px;
+    margin: 0 -70px;
     cursor: pointer;
     opacity: .2;
 }
@@ -354,7 +344,7 @@ heigth
 .search__input__key {
     background-image: url(img/key.svg);
     width: 28px;
-    margin: 0px -40px;
+    margin: 0 -40px;
     opacity: .7;
 }
 
@@ -379,14 +369,11 @@ heigth
     color: #999;
 }
 
-
-/* не работает вывше определённый :hover (( */
-
 .search__help a:hover {
     color: #c00;
 }
 
-.ad-middle {
+.add-middle {
     grid-area: o;
 }
 
@@ -431,7 +418,7 @@ heigth
     background-image: linear-gradient(to right, #00a3fa, #716ef8);
 }
 
-.info-blocks__tv__logo i {
+.info-blocks__tv__logo span {
     font-style: normal;
     font-size: 30px;
     position: absolute;
@@ -467,15 +454,15 @@ div.info-block__auto__news {
     content: ' ';
     position: absolute;
     width: 250px;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, .7);
     height: 30px;
     filter: blur(2px);
     margin: 20px -210px;
 }
 
 .info-block__auto .bot {
-    background-color: rgba(255, 255, 255, 0.7);
-    margin: -30px 0px;
+    background-color: rgba(255, 255, 255, .7);
+    margin: -30px 0;
     height: 20px;
 }
 
@@ -487,7 +474,7 @@ div.info-block__auto__news {
     margin-bottom: 10px;
 }
 
-.block3>div {
+.block3 > div {
     margin-bottom: 20px;
 }
 
@@ -497,7 +484,7 @@ div.info-block__auto__news {
     background-image: url(img/weather.svg);
     width: 32px;
     height: 32px;
-    margin: -15px 0px -10px;
+    margin: -15px 0 -10px;
     background-position: 50% 50%;
     background-repeat: no-repeat;
 }
@@ -534,16 +521,17 @@ div.info-block__auto__news {
 @media screen and (max-width: 1280px) and (min-width: 720px) {
     .wrapper {
         max-width: 720px;
-        margin: auto auto;
+        margin: auto;
         display: grid;
         /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
         grid-template-columns: 130px 400px 100px 100px;
         grid-template-rows: 65px 230px 110px 110px 550px;
         /* m, s, x, v - empty space */
         /* m, s, x, v - blocks */
-        grid-template-areas: "a s b c" "d d d d" "f g g g" "o o o o" "l l l l"
+        grid-template-areas: 'a s b c' 'd d d d'
+            'f g g g' 'o o o o' 'l l l l';
     }
-    .ad {
+    .add {
         display: none;
     }
     .search__input input {
@@ -555,21 +543,19 @@ div.info-block__auto__news {
 }
 
 @media screen and (max-width: 910px) {
-    * {
-        font-size: 12px;
-    }
     .wrapper {
         max-width: 600px;
-        margin: auto auto;
+        margin: auto;
         display: grid;
         /* grid-template-columns: 2fr 3fr 3fr 2fr 1fr 2fr; */
         grid-template-columns: 120px 200px 100px 100px;
         grid-template-rows: 70px 220px 110px 110px 550px;
         /* m, s, x, v - empty space */
         /* m, s, x, v - blocks */
-        grid-template-areas: "a s b c" "d d d d" "f g g g" "o o o o" "p l l l"
+        grid-template-areas: 'a s b c' 'd d d d'
+            'f g g g' 'o o o o' 'p l l l';
     }
-    .ad {
+    .add {
         display: none;
     }
     .search__input input {
