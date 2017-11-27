@@ -39,11 +39,6 @@ button:focus {
         'v o o o x' 'v l l l x';
 }
 
-.wrapper > div {
-    background: none;
-    /* border: 1px solid black; */
-}
-
 .geo {
     grid-area: a;
     line-height: 11px;
