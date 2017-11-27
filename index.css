@@ -141,12 +141,13 @@ label:before {
     box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .4);
     margin-top: 0;
     cursor: auto;
+    text-align: left;
 }
 
 .options__menu::after {
     content: '';
     position: relative;
-    left: 0px;
+    left: 0;
     bottom: 188px;
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
@@ -334,7 +335,7 @@ label:before {
 
 .search__input input {
     width: 83%;
-    height: 35px;
+    height: 36px;
     border: 2px solid #ffdb4d;
     font-size: 16px;
     line-height: 36px;
@@ -372,13 +373,31 @@ label:before {
     opacity: 1;
 }
 
-.search__input button {
-    width: 13%;
-    height: 35px;
-    background-color: #ffdb4d;
-    border: none;
-    font-size: 16px;
+.search__input__button {
+    display: inline-block;
+    padding: 10px;
+    position: relative;
+    background: #ffdb4d;
+    color: #000;
     cursor: pointer;
+}
+
+.search__input__button:after,
+.search__input__button:before {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 50%;
+    background: #ffdb4d;
+    width: 26px;
+    height: 27px;
+    margin-top: -14px;
+    z-index: -1;
+    transform: rotate(45deg);
+}
+
+.search__input__button:hover {
+    color: #000;
 }
 
 .search__help a {
@@ -549,9 +568,7 @@ div.info-block__auto__news {
     .search__input input {
         width: 73%;
     }
-    .info-blocks div {
-        width: 255px;
-    }
+    
 }
 
 @media screen and (max-width: 910px) {
@@ -560,7 +577,7 @@ div.info-block__auto__news {
         margin: auto;
         display: grid;
         grid-template-columns: 120px 200px 100px 100px;
-        grid-template-rows: 100px 220px 150px 110px auto;
+        grid-template-rows: 100px 220px 170px 90px auto;
         grid-template-areas: 'a b c c' 'd d d d'
             'f g g g' 'o o o o' 'p l l l';
     }
@@ -568,7 +585,7 @@ div.info-block__auto__news {
         display: none;
     }
     .search__input input {
-        width: 87%;
+        width: 80%;
     }
     .search__container {
         margin: -15px 0;
@@ -595,5 +612,7 @@ div.info-block__auto__news {
         text-align: right;
         padding-right: 20px;
     }
-
+    .options__menu {
+        right: -90px;
+    }
 }
