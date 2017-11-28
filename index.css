@@ -106,7 +106,7 @@ a:hover {
     padding-top: 18px;
 }
 
-label {
+.options label {
     cursor: pointer;
     display: inline-block;
     position: relative;
@@ -114,7 +114,7 @@ label {
     margin: 2px 10px 2px 2px;
 }
 
-label:before {
+.options label:before {
     content: '';
     width: 15px;
     height: 15px;
@@ -430,6 +430,35 @@ label:before {
     font-weight: bold;
 }
 
+.info-blocks__jokes input {
+    display: none;
+}
+
+.info-blocks__jokes {
+    width: 290px;
+}
+
+.info-blocks__jokes p span {
+    display: none;
+}
+
+.info-blocks__jokes label {
+    color: #0054b9;
+    cursor: pointer;
+}
+
+#first:checked ~ label:not([for='second']),
+#second:checked ~ label:not([for='third']),
+#third:checked ~ label:not([for='first']) {
+    display: none;
+}
+
+#first:checked ~ p .joke1,
+#second:checked ~ p .joke2,
+#third:checked ~ p .joke3 {
+    display: block;
+}
+
 .info-blocks__caption {
     color: #0054b9;
     font-size: 18px;
@@ -568,7 +597,7 @@ div.info-block__auto__news {
     .search__input input {
         width: 73%;
     }
-    
+
 }
 
 @media screen and (max-width: 910px) {
